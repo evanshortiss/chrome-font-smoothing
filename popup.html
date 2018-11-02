@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Font Smoothing</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="css/mdl-font.css" />
+    <link rel="stylesheet" href="css/mdl.css" />
+    <style>
+      *, h6, h5 {
+        font-weight: 200;
+      }
+
+      body {
+        min-width: 300px;
+      }
+
+      label[value="antialiased"] span {
+        -webkit-font-smoothing: antialiased;
+      }
+
+      label[value="initial"] span {
+        -webkit-font-smoothing: initial;
+      }
+
+      label[value="none"] span {
+        -webkit-font-smoothing: none;
+      }
+
+      .demo .aliased {
+        font-size: 12pt;
+      }
+
+      header {
+        background: rgb(33,150,243);
+        color: white;
+      }
+
+      header h5 {
+        margin: 0;
+        padding: 0.5em;
+      }
+
+      .content {
+        padding: 0.75em;
+      }
+
+      .content p {
+        font-size: 12pt;
+      }
+
+      .content h6 {
+        margin-top: 0.5em;
+      }
+
+      .options label {
+        width: 100%;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body class="aliased enabled">
+    <header>
+      <div>
+        <h5>Font Smoothing</h5>
+      </div>
+    </header>
+
+    <div class="content">
+      <h6>Selecting font smoothing style:</h6>
+      <div class="options">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+          <input type="radio" id="option-1" class="mdl-radio__button" name="options">
+          <span class="mdl-radio__label"></span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+          <input type="radio" id="option-2" class="mdl-radio__button" name="options">
+          <span class="mdl-radio__label"></span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+          <input type="radio" id="option-3" class="mdl-radio__button" name="options">
+          <span class="mdl-radio__label aliased"></span>
+        </label>
+      </div>
+
+      <br>
+      <small>
+        Note: Refresh required for pages that were open before this plugin was installed
+      </small>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="js/mdl.js"></script>
+  </body>
+</html>
